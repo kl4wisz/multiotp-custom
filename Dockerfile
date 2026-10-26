@@ -6,8 +6,7 @@ RUN apt-get update && \
         ca-certificates \
         apt-transport-https \
         curl \
-        gnupg \
-	freeradius-postgresql && \
+        gnupg && \
     curl -fsSL https://packages.sury.org/php/apt.gpg | gpg --dearmor -o /usr/share/keyrings/sury-php.gpg && \
     echo "deb [signed-by=/usr/share/keyrings/sury-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/sury-php.list && \
     apt-get update && \
